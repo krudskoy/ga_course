@@ -8,7 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo GitHub context
-        run: |
-          echo Open issues: github.open_issues
-          echo Issues url: github.issues_url
+        run: echo "Open issues: ${{ github.open_issues }}\nIssues url: ${{ github.issues_url }}"
       
