@@ -4,6 +4,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Lint
+        run: npm i -g lint
       - name: Lint code
         run: lint
   test:
