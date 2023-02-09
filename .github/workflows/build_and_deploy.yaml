@@ -4,12 +4,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Install eslint
-        run: npm install -g eslint
-      - name: Install eslint-plugin-react
-        run: npm install eslint-plugin-react@latest --save-dev
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Install eslint
+        run: npm init
       - name: Lint code
         run: npm run lint
       - name: Test code
