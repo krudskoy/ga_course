@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install eslint
-        run: npm install -g eslint
+        run: npm install -g eslint eslint-plugin-react
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Lint code
