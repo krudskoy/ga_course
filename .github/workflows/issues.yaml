@@ -2,6 +2,7 @@ name: echo_issues
 on:
   issues:
     types: opened
+  workflow_dispatch:
 jobs:
   echo_issue:
     steps:
