@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: echo GitHub context
         run: |
-          echo Open issues: ${{ github.open_issues }}
-          echo Issues url: ${{ github.issues_url }}
+          echo Open issues: github.open_issues
+          echo Issues url: github.issues_url
       
