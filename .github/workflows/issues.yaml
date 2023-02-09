@@ -8,4 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo GitHub context
-        run: echo "${{ toJSON(github) }}"
+        run: |
+          echo "Open issues: ${{ github.open_issues }}"
+          echo "Issues url: ${{ github.issues_url }}"
+      
