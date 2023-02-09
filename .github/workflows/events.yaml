@@ -1,6 +1,6 @@
 name: events
 on:
-  pull-request:
+  pull_request:
     types:
       - opened
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
     branches:
       - main
       - "dev/*"
-    path-ignore:
+    paths-ignore:
       - ".github/workflows/*"
 jobs:
   build:
