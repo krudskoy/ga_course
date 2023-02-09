@@ -4,12 +4,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Install eslint
+        run: npm install -g eslint
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Lint code
-        run: npm lint
+        run: npm run lint
       - name: Test code
-        run: npm test
+        run: npm run test
   build:
     runs-on: ubuntu-latest
     needs: test
