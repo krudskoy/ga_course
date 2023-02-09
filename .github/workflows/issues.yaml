@@ -1,0 +1,8 @@
+name: echo_issues
+on:
+  issues:
+    types: opened
+jobs:
+  echo_issue:
+    steps:
+      run: echo ${{ toJSON(github) }}
