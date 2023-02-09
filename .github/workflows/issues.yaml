@@ -5,4 +5,5 @@ on:
 jobs:
   echo_issue:
     steps:
-      run: echo ${{ toJSON(github) }}
+      - name: echo GitHub context
+        run: echo ${{ toJSON(github) }}
