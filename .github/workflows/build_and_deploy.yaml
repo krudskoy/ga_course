@@ -1,21 +1,21 @@
 name: build_and_deploy
 on: push
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lint code
-        run: npm run lint
   test:
     runs-on: ubuntu-latest
-    needs: lint
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Lint code
+        run: npm run lint
       - name: Test code
         run: npm run test
   build:
-   runs-on: ubuntu-latest
-   needs: test
-   steps:
-     - name: Build code
-       run: npm run build
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Build code
+        run: npm run build
       
