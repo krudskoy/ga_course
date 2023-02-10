@@ -29,7 +29,8 @@ jobs:
       - name: Output MongoDB name
         run: echo $MONGODB_USERNAME
       - name: Output MongoDB name in text
-        run: echo "MongoDB username: ${{ env.MONGODB_USERNAME }}"
+        run: |
+          echo "MongoDB username: ${{ env.MONGODB_USERNAME }}"
   build:
     needs: test
     runs-on: ubuntu-latest
