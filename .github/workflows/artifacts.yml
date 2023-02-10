@@ -25,6 +25,7 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
+    # Use outputs to pass key-value pairs between jobs.(For example: filenames) (1)
     outputs:
       script-file: ${{ steps.publish.outputs.script-file }}
     steps:
@@ -39,6 +40,7 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
+      # Output value part (2)
       - name: Publish JS filename
         id: publish
         run: find dist/assets/*.js -type f -execdir echo 'script-file={}' >> $GITHUB_OUTPUT ';'
@@ -61,6 +63,7 @@ jobs:
           name: dist-files
       - name: List files
         run: ls -lah
+      # Get outputs from another job
       - name: Output filename
         run: echo "${{ needs.build.outputs.script-file }}"
       - name: Deploy
