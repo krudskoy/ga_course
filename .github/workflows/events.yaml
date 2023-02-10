@@ -1,11 +1,14 @@
 name: events
 on:
+  # Events that trigger workflows:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
   pull_request:
     types:
       - opened
   workflow_dispatch:
   push:
     # Event filters:
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
     branches:
       - main
       - "dev/*"
@@ -15,6 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Use action from Marketplace
+      # https://github.com/marketplace
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Install dependencies

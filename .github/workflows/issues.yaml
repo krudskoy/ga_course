@@ -7,6 +7,9 @@ jobs:
   echo_issue:
     runs-on: ubuntu-latest
     steps:
+      # Contexts & Expressions
+      # https://docs.github.com/en/actions/learn-github-actions/contexts
+      # https://docs.github.com/en/actions/learn-github-actions/expressions
       - name: echo GitHub context
         run: |
          echo "Open issues: ${{ github.event.repository.open_issues }}"
