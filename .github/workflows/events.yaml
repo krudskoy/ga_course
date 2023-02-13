@@ -1,4 +1,4 @@
-name: events
+name: Events
 on:
   # Events that trigger workflows:
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows

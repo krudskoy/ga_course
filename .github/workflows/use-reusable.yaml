@@ -1,4 +1,4 @@
-name: use_reusable_deploy
+name: Use Reusable Deploy
 on:
   push:
     branches:

@@ -1,4 +1,4 @@
-name: echo_issues
+name: Issues
 on:
   issues:
     types: opened
